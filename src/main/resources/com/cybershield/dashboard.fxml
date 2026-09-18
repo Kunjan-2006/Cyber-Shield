@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cybershield.controller.DashboardController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    
+    <Label styleClass="header-label" text="Live Dashboard" />
+    
+    <GridPane hgap="20.0" vgap="20.0">
+        <!-- Row 0 -->
+        <VBox styleClass="stat-card" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="220">
+            <Label styleClass="stat-title" text="Total Incidents" />
+            <Label fx:id="lblTotalIncidents" styleClass="stat-value" text="0" />
+        </VBox>
+        <VBox styleClass="stat-card" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="220">
+            <Label styleClass="stat-title" text="Critical Incidents" />
+            <Label fx:id="lblCriticalIncidents" styleClass="stat-value, critical-stat" text="0" />
+        </VBox>
+        <VBox styleClass="stat-card" GridPane.columnIndex="2" GridPane.rowIndex="0" prefWidth="220">
+            <Label styleClass="stat-title" text="Open/Queued Incidents" />
+            <Label fx:id="lblOpenIncidents" styleClass="stat-value" text="0" />
+        </VBox>
+        <VBox styleClass="stat-card" GridPane.columnIndex="3" GridPane.rowIndex="0" prefWidth="220">
+            <Label styleClass="stat-title" text="Investigating Incidents" />
+            <Label fx:id="lblInvestigatingIncidents" styleClass="stat-value" text="0" />
+        </VBox>
+        
+        <!-- Row 1 -->
+        <VBox styleClass="stat-card" GridPane.columnIndex="0" GridPane.rowIndex="1" prefWidth="220">
+            <Label styleClass="stat-title" text="Available Analysts" />
+            <Label fx:id="lblAvailableAnalysts" styleClass="stat-value" text="0" />
+        </VBox>
+        <VBox styleClass="stat-card" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="220">
+            <Label styleClass="stat-title" text="Analysts On Mission" />
+            <Label fx:id="lblAnalystsOnMission" styleClass="stat-value" text="0" />
+        </VBox>
+        <VBox styleClass="stat-card" GridPane.columnIndex="2" GridPane.rowIndex="1" prefWidth="220">
+            <Label styleClass="stat-title" text="Compromised Systems" />
+            <Label fx:id="lblCompromisedSystems" styleClass="stat-value, critical-stat" text="0" />
+        </VBox>
+        <VBox styleClass="stat-card" GridPane.columnIndex="3" GridPane.rowIndex="1" prefWidth="220">
+            <Label styleClass="stat-title" text="Resolved Incidents" />
+            <Label fx:id="lblResolvedIncidents" styleClass="stat-value" text="0" />
+        </VBox>
+    </GridPane>
+</VBox>
